@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7rz-jU-cyw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7rz-jU-cyw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Hybrid OpenWebRTC Demo-->
+        <!--Hybrid-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SimpleDemoViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="BYZ-38-t0r" customClass="SimpleDemoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,12 +17,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhA-Bm-ncF" customClass="OpenWebRTCVideoView">
-                                <rect key="frame" x="16" y="81" width="568" height="302"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GZU-2p-EUI">
+                                <rect key="frame" x="12" y="81" width="568" height="302"/>
+                                <subviews>
+                                    <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="OhA-Bm-ncF" customClass="OpenWebRTCVideoView">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="302"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="top" secondItem="GZU-2p-EUI" secondAttribute="top" id="3hZ-K3-w6W"/>
+                                    <constraint firstAttribute="bottom" secondItem="OhA-Bm-ncF" secondAttribute="bottom" id="4xO-8d-9BL"/>
+                                    <constraint firstAttribute="trailing" secondItem="OhA-Bm-ncF" secondAttribute="trailing" id="5al-Em-z8h"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="leading" secondItem="GZU-2p-EUI" secondAttribute="leading" id="6M0-t0-3Pf"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="trailing" secondItem="GZU-2p-EUI" secondAttribute="trailingMargin" id="8X6-RC-QBQ"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="top" secondItem="GZU-2p-EUI" secondAttribute="top" id="Cs1-4M-ChY"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="leading" secondItem="GZU-2p-EUI" secondAttribute="leadingMargin" id="I07-PK-qyf"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="top" secondItem="GZU-2p-EUI" secondAttribute="top" id="Jcg-CQ-gXy"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="leading" secondItem="GZU-2p-EUI" secondAttribute="leading" id="KtI-bt-cs2"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="top" secondItem="GZU-2p-EUI" secondAttribute="top" id="OBr-I8-ZC0"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="leading" secondItem="GZU-2p-EUI" secondAttribute="leading" id="OPU-bw-Xhn"/>
+                                    <constraint firstAttribute="bottom" secondItem="OhA-Bm-ncF" secondAttribute="bottom" id="Tju-2E-NiN"/>
+                                    <constraint firstAttribute="trailing" secondItem="OhA-Bm-ncF" secondAttribute="trailing" id="UTX-W9-3vX"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="centerX" secondItem="GZU-2p-EUI" secondAttribute="centerX" id="XpX-Qf-eVd"/>
+                                    <constraint firstAttribute="bottom" secondItem="OhA-Bm-ncF" secondAttribute="bottom" id="apO-80-JOz"/>
+                                    <constraint firstAttribute="trailing" secondItem="OhA-Bm-ncF" secondAttribute="trailing" id="j9I-n6-9Wc"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="leading" secondItem="GZU-2p-EUI" secondAttribute="leading" id="o7l-U3-pDt"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="centerY" secondItem="GZU-2p-EUI" secondAttribute="centerY" id="rRr-Sh-4an"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="top" secondItem="GZU-2p-EUI" secondAttribute="topMargin" id="xBe-G5-IzD"/>
+                                    <constraint firstItem="OhA-Bm-ncF" firstAttribute="bottom" secondItem="GZU-2p-EUI" secondAttribute="bottomMargin" id="xMm-HR-rmL"/>
+                                </constraints>
+                            </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="e9N-Z4-9Q2">
-                                <rect key="frame" x="130" y="512" width="456" height="31"/>
+                                <rect key="frame" x="126" y="512" width="456" height="31"/>
                                 <color key="tintColor" red="0.42479745369999999" green="0.64265046299999995" blue="0.74085648150000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="u5P-hW-DxW"/>
@@ -49,11 +76,47 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WEG-Ya-uVA" customClass="OpenWebRTCVideoView">
-                                <rect key="frame" x="16" y="398" width="108" height="144"/>
+                                <rect key="frame" x="12" y="398" width="108" height="144"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="108" id="QK6-Bf-II7"/>
                                     <constraint firstAttribute="height" constant="144" id="oif-qd-MeZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQx-uh-8Xd">
+                                <rect key="frame" x="0.0" y="64" width="600" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-2Q-6Ki">
+                                        <rect key="frame" x="536" y="15" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="JvY-VN-N2C"/>
+                                            <constraint firstAttribute="width" constant="46" id="P4o-gn-rMO"/>
+                                        </constraints>
+                                        <state key="normal" title="GO"/>
+                                        <connections>
+                                            <action selector="goButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Vq-fI-fsb"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wSk-8a-mmO">
+                                        <rect key="frame" x="8" y="16" width="441" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="441" id="81f-U1-Tv1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Dht-3l-2UK"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.44721130004185172" green="0.87725323813873701" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="wSk-8a-mmO" firstAttribute="top" secondItem="FQx-uh-8Xd" secondAttribute="top" constant="16" id="JDu-oC-bWv"/>
+                                    <constraint firstAttribute="trailing" secondItem="LYa-2Q-6Ki" secondAttribute="trailing" constant="18" id="S8N-zg-NCA"/>
+                                    <constraint firstItem="LYa-2Q-6Ki" firstAttribute="leading" secondItem="wSk-8a-mmO" secondAttribute="trailing" constant="87" id="lKS-bw-BHm"/>
+                                    <constraint firstAttribute="height" constant="60" id="rfx-zU-9W0"/>
+                                    <constraint firstItem="wSk-8a-mmO" firstAttribute="leading" secondItem="FQx-uh-8Xd" secondAttribute="leading" constant="8" id="xwc-uh-iju"/>
+                                    <constraint firstItem="LYa-2Q-6Ki" firstAttribute="top" secondItem="FQx-uh-8Xd" secondAttribute="top" constant="15" id="yJA-1l-XS8"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -61,63 +124,45 @@
                         <constraints>
                             <constraint firstItem="Kay-Hn-ce7" firstAttribute="centerX" secondItem="VcG-7Y-8B7" secondAttribute="centerX" id="4Qu-PZ-adx"/>
                             <constraint firstAttribute="centerY" secondItem="VcG-7Y-8B7" secondAttribute="centerY" constant="-170.5" id="6M9-vF-wQk"/>
-                            <constraint firstItem="OhA-Bm-ncF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="8jx-fO-11S"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WEG-Ya-uVA" secondAttribute="trailing" constant="460" id="Cql-MG-rdt"/>
-                            <constraint firstItem="OhA-Bm-ncF" firstAttribute="trailing" secondItem="e9N-Z4-9Q2" secondAttribute="trailing" id="FVc-GG-BE1"/>
                             <constraint firstItem="Kay-Hn-ce7" firstAttribute="centerX" secondItem="VcG-7Y-8B7" secondAttribute="centerX" id="GZH-oo-e2o"/>
                             <constraint firstAttribute="centerX" secondItem="VcG-7Y-8B7" secondAttribute="centerX" constant="-58" id="JHC-pB-igY"/>
+                            <constraint firstItem="GZU-2p-EUI" firstAttribute="trailing" secondItem="e9N-Z4-9Q2" secondAttribute="trailing" id="Jku-bR-o5K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FQx-uh-8Xd" secondAttribute="trailing" constant="-20" id="MDt-S7-hbG"/>
+                            <constraint firstItem="GZU-2p-EUI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="NZd-kX-KSM"/>
                             <constraint firstItem="VcG-7Y-8B7" firstAttribute="top" secondItem="Kay-Hn-ce7" secondAttribute="bottom" constant="8" id="ROW-y9-cjw"/>
-                            <constraint firstItem="WEG-Ya-uVA" firstAttribute="top" secondItem="OhA-Bm-ncF" secondAttribute="bottom" constant="15" id="SbL-3G-SbP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="e9N-Z4-9Q2" secondAttribute="bottom" constant="14" id="TwG-e0-G78"/>
+                            <constraint firstItem="FQx-uh-8Xd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VZN-bv-UAh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WEG-Ya-uVA" secondAttribute="bottom" constant="14" id="YLJ-c4-QIi"/>
                             <constraint firstAttribute="centerY" secondItem="e9N-Z4-9Q2" secondAttribute="centerY" constant="-227" id="c1w-yB-vlC"/>
+                            <constraint firstItem="WEG-Ya-uVA" firstAttribute="top" secondItem="GZU-2p-EUI" secondAttribute="bottom" constant="15" id="d4X-93-Y1F"/>
+                            <constraint firstItem="GZU-2p-EUI" firstAttribute="leading" secondItem="WEG-Ya-uVA" secondAttribute="leading" id="f5B-cc-Aiy"/>
                             <constraint firstItem="e9N-Z4-9Q2" firstAttribute="top" secondItem="VcG-7Y-8B7" secondAttribute="bottom" constant="8" id="g3e-8c-YBB"/>
-                            <constraint firstItem="WEG-Ya-uVA" firstAttribute="leading" secondItem="OhA-Bm-ncF" secondAttribute="leading" id="gcG-bH-C5j"/>
                             <constraint firstItem="VcG-7Y-8B7" firstAttribute="top" secondItem="Kay-Hn-ce7" secondAttribute="bottom" constant="8" id="lKt-Q7-CKJ"/>
                             <constraint firstItem="e9N-Z4-9Q2" firstAttribute="leading" secondItem="WEG-Ya-uVA" secondAttribute="trailing" constant="8" id="lph-1n-PhE"/>
                             <constraint firstItem="e9N-Z4-9Q2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pzS-3s-nBx"/>
+                            <constraint firstItem="FQx-uh-8Xd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="tn0-7g-wj3"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="4Qu-PZ-adx"/>
+                                <exclude reference="c1w-yB-vlC"/>
                                 <exclude reference="6M9-vF-wQk"/>
                                 <exclude reference="ROW-y9-cjw"/>
-                                <exclude reference="c1w-yB-vlC"/>
                             </mask>
                         </variation>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Join" id="QSc-Lj-Oxp">
-                            <color key="tintColor" red="0.42479745369999999" green="0.64265046299999995" blue="0.74085648150000005" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="joinButtonTapped:" destination="BYZ-38-t0r" id="JBU-8g-2wd"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="30" style="plain" systemItem="fixedSpace" id="bFO-Td-c5g"/>
-                        <barButtonItem title="Initiate Call" id="meE-Iu-5yq">
-                            <color key="tintColor" red="0.42479745369999999" green="0.64265046299999995" blue="0.74085648150000005" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="callButtonTapped:" destination="BYZ-38-t0r" id="uMx-8Q-Rd4"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem width="30" style="plain" systemItem="fixedSpace" id="NrP-5J-UC8"/>
-                        <barButtonItem title="Hang Up" id="c6H-Ie-SZy">
-                            <color key="tintColor" red="0.42479745369999999" green="0.64265046299999995" blue="0.74085648150000005" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="hangupButtonTapped:" destination="BYZ-38-t0r" id="KcB-Wd-RNS"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Hybrid OpenWebRTC Demo" id="7r3-5r-MrZ"/>
+                    <navigationItem key="navigationItem" title="Hybrid" id="7r3-5r-MrZ" propertyAccessControl="localizable"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <outlet property="callButton" destination="meE-Iu-5yq" id="Uch-Wh-swh"/>
-                        <outlet property="hangupButton" destination="c6H-Ie-SZy" id="EHq-fY-jU4"/>
-                        <outlet property="joinButton" destination="QSc-Lj-Oxp" id="iHl-jf-3ww"/>
+                        <outlet property="goButton" destination="LYa-2Q-6Ki" id="ElR-GT-UzW"/>
                         <outlet property="remoteView" destination="OhA-Bm-ncF" id="Rfd-KJ-qMu"/>
                         <outlet property="roomLabel" destination="VcG-7Y-8B7" id="4ml-fC-TNK"/>
                         <outlet property="roomSlider" destination="e9N-Z4-9Q2" id="EnH-ol-mBj"/>
                         <outlet property="selfView" destination="WEG-Ya-uVA" id="9BF-zV-vBE"/>
+                        <outlet property="topView" destination="FQx-uh-8Xd" id="QEy-5p-czV"/>
+                        <outlet property="urlField" destination="wSk-8a-mmO" id="uoo-kL-wWy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

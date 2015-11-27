@@ -51,12 +51,12 @@
 		F8CD809D19FD7DB700B0ED0C /* SimpleDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleDemoViewController.m; sourceTree = "<group>"; };
 		F8E9CB461BD4BDE3006ED336 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		F8E9CB481BD4BDF0006ED336 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		F8E9CB4E1BD57447006ED336 /* OpenWebRTCVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWebRTCVideoView.h; path = "../OwrHelpers/OpenWebRTCVideoView.h"; sourceTree = "<group>"; };
-		F8E9CB4F1BD57447006ED336 /* OpenWebRTCVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWebRTCVideoView.m; path = "../OwrHelpers/OpenWebRTCVideoView.m"; sourceTree = "<group>"; };
-		F8E9CB501BD57447006ED336 /* OpenWebRTCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWebRTCViewController.h; path = "../OwrHelpers/OpenWebRTCViewController.h"; sourceTree = "<group>"; };
-		F8E9CB511BD57447006ED336 /* OpenWebRTCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWebRTCViewController.m; path = "../OwrHelpers/OpenWebRTCViewController.m"; sourceTree = "<group>"; };
-		F8E9CB521BD57447006ED336 /* OpenWebRTCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWebRTCWebView.h; path = "../OwrHelpers/OpenWebRTCWebView.h"; sourceTree = "<group>"; };
-		F8E9CB531BD57447006ED336 /* OpenWebRTCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWebRTCWebView.m; path = "../OwrHelpers/OpenWebRTCWebView.m"; sourceTree = "<group>"; };
+		F8E9CB4E1BD57447006ED336 /* OpenWebRTCVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWebRTCVideoView.h; path = ../OwrHelpers/OpenWebRTCVideoView.h; sourceTree = "<group>"; };
+		F8E9CB4F1BD57447006ED336 /* OpenWebRTCVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWebRTCVideoView.m; path = ../OwrHelpers/OpenWebRTCVideoView.m; sourceTree = "<group>"; };
+		F8E9CB501BD57447006ED336 /* OpenWebRTCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWebRTCViewController.h; path = ../OwrHelpers/OpenWebRTCViewController.h; sourceTree = "<group>"; };
+		F8E9CB511BD57447006ED336 /* OpenWebRTCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWebRTCViewController.m; path = ../OwrHelpers/OpenWebRTCViewController.m; sourceTree = "<group>"; };
+		F8E9CB521BD57447006ED336 /* OpenWebRTCWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenWebRTCWebView.h; path = ../OwrHelpers/OpenWebRTCWebView.h; sourceTree = "<group>"; };
+		F8E9CB531BD57447006ED336 /* OpenWebRTCWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenWebRTCWebView.m; path = ../OwrHelpers/OpenWebRTCWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +181,7 @@
 		F8CD804719FD2CEF00B0ED0C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ericsson Research";
 				TargetAttributes = {
 					F8CD804E19FD2CEF00B0ED0C = {
@@ -273,9 +273,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: SUN YIMING (RT8YCB2MX7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SUN YIMING (RT8YCB2MX7)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -315,8 +318,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: SUN YIMING (RT8YCB2MX7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: SUN YIMING (RT8YCB2MX7)";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -337,7 +342,6 @@
 		F8CD807319FD2CEF00B0ED0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -352,6 +356,7 @@
 				INFOPLIST_FILE = SimpleDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericsson.research.owr.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				VALID_ARCHS = "arm64 armv7s armv7";
@@ -361,7 +366,6 @@
 		F8CD807419FD2CEF00B0ED0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -376,6 +380,7 @@
 				INFOPLIST_FILE = SimpleDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ericsson.research.owr.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				VALID_ARCHS = "arm64 armv7s armv7";

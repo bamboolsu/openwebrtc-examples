@@ -36,6 +36,10 @@
     IBOutlet UIBarButtonItem *joinButton;
     IBOutlet UIBarButtonItem *callButton;
     IBOutlet UIBarButtonItem *hangupButton;
+    
+    IBOutlet UIView *topView;
+    IBOutlet UITextField *urlField;
+    IBOutlet UIButton *goButton;
 }
 
 @end
@@ -51,9 +55,37 @@
     joinButton.enabled = callButton.enabled = hangupButton.enabled = NO;
 
     // TODO: Send selfView and remoteView ref to OpenWebRTC.
-    [self loadRequestWithURL:@"http://demo.openwebrtc.org"];
+    //[self loadRequestWithURL:@"http://demo.openwebrtc.org"];
+    [self loadRequestWithURL:@"http://172.18.196.27:8080"];
 
     self.browserView.hidden = NO;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self.view bringSubviewToFront:topView];
+    
+    self.browserView.frame = CGRectMake(0, 124, self.view.frame.size.width, self.view.frame.size.height - 124);
+}
+
+- (IBAction)goButtonDidTapped:(id)sender
+{
+    [self loadRequestWithURL:urlField.text];
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation
@@ -61,6 +93,7 @@
     joinButton.enabled = YES;
 }
 
+/*
 - (IBAction)joinButtonTapped:(id)sender
 {
     int room = [roomSlider value];
@@ -81,6 +114,7 @@
 {
     exit(0); // Nice :)
 }
+ */
 
 - (IBAction)sliderValueChanged:(UISlider *)sender
 {
